@@ -1,0 +1,87 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+.skill {
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    justify-content: center;
+    @include mobile {
+        flex-direction: column;
+    }
+}
+.skill-half {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+
+    margin: 2rem;
+    input {
+        @include inputForm;
+    }
+
+    span {
+        @include spanForm;
+    }
+    @include mobile {
+        flex-direction: column;
+        margin: 0.1rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+.skill-row {
+    display: flex;
+    flex-direction: row;
+    .trash {
+        color: $base-color-purple;
+        cursor: pointer;
+        text-align: center;
+    }
+    input {
+        margin: 0.2rem;
+    }
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0px;
+    width: 72px;
+    height: 72px;
+}
+.skill-set {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    border: 2px solid $base-color-purple;
+    padding: 0.5rem;
+    border-radius: 6px;
+    .skill-set-name {
+        height: 2rem;
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        p {
+            color: gray;
+            font-size: 1rem;
+            font-weight: 550;
+            @include mobile {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    @include mobile {
+        width: 90%;
+        padding: 0.1rem;
+        align-items: center;
+    }
+}

@@ -1,0 +1,51 @@
+@import "../../../styles/mixins.scss";
+.education {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        @include inputForm;
+    }
+    span {
+        @include spanForm;
+    }
+    @include mobile {
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1rem;
+    }
+}
+.education-upper {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    @include mobile {
+        width: 96%;
+        flex-direction: column;
+    }
+}
+.education-column {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 100%;
+    @include mobile {
+        width: 100%;
+        flex-direction: column;
+        margin: 0.2rem;
+    }
+}
+
+.education-bottom {
+    display: flex;
+    flex-direction: row;
+
+    input {
+        margin: 0.1rem;
+    }
+}

@@ -1,0 +1,130 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+.builder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    h1 {
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+    @include mobile {
+        height: auto;
+        margin-top: 2rem;
+    }
+}
+.progress-bar {
+    width: 70vw;
+    height: 4vh;
+    background-color: white;
+    border-radius: 18px;
+    border: 2px solid $base-color-purple;
+    @include mobile {
+        height: 2.5vh;
+    }
+}
+.progressing {
+    width: 33.3%;
+    height: 100%;
+    background-color: $base-color-purple;
+    border-radius: 18px;
+    transition: 0.5s linear;
+}
+.build-form {
+    width: 90vw;
+    height: auto;
+    box-shadow: 2px 6px 6px 6px $base-color-lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mobile {
+        width: 100vw;
+    }
+    .build-forms-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        @include mobile {
+            margin-top: 0.5rem;
+        }
+    }
+    .next-button {
+        width: 8rem;
+        height: 3rem;
+        border: 0px;
+        background-color: $base-color-purple;
+        color: white;
+        margin: 1rem;
+        border-radius: 4px;
+        font-weight: 550;
+        cursor: pointer;
+        &:active {
+            animation: ripple 1s ease-in;
+        }
+    }
+    @keyframes ripple {
+        0% {
+            box-shadow: 1px 1px 1px 1px gray;
+        }
+        100% {
+            box-shadow: 12px 12px 12px 12px gray;
+        }
+    }
+    .prev-button {
+        width: 8rem;
+        height: 3rem;
+        border: 0px;
+        background-color: white;
+        color: $base-color-purple;
+        border: 2px solid $base-color-purple;
+        margin: 1rem;
+        border-radius: 4px;
+        font-weight: 550;
+        cursor: pointer;
+    }
+    .prev-button:disabled {
+        background-color: lightgray;
+        border: 1px solid lightgray;
+        color: white;
+        cursor: not-allowed;
+    }
+    .next-button:disabled {
+        background-color: lightgray;
+        border: 1px solid lightgray;
+        color: white;
+        cursor: not-allowed;
+    }
+}
+.form-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 12%;
+    .tag {
+        padding: 1rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: gray;
+        border-bottom: 2px solid $base-color-lightgray;
+        cursor: pointer;
+        @include mobile {
+            display: none;
+            text-align: center;
+        }
+    }
+    .tag.active {
+        border-bottom: 2px solid $base-color-purple;
+        color: $base-color-purple;
+        @include mobile {
+            display: flex;
+        }
+    }
+}

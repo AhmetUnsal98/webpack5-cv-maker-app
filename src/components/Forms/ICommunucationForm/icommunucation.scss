@@ -1,0 +1,62 @@
+@import "../../../styles/mixins.scss";
+.communucation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+    align-items: center;
+    input {
+        @include inputForm;
+    }
+    span {
+        @include spanForm;
+    }
+    @include mobile {
+    }
+}
+.comm-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin-top: 1rem;
+    @include mobile {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.4rem;
+    }
+}
+.comm-column {
+    width: 100%;
+    margin: 1rem;
+    @include mobile {
+        margin: 0.2rem;
+    }
+}
+.comm-column-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        width: 6rem;
+        height: 3rem;
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+        border: 0px;
+        background-color: $base-color-purple;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 6px;
+    }
+}
+.social-media-set {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    height: 2rem;
+    border: 2px solid $base-color-purple;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    justify-content: space-around;
+}

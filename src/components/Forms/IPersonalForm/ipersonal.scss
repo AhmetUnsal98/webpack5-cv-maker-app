@@ -1,0 +1,57 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+.ipersonal {
+    width: 100vw;
+    height: auto;
+    min-height: 320px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 1rem;
+
+    @include mobile {
+        margin: 0;
+        flex-direction: column;
+        margin-top: 0.5rem;
+    }
+
+    input {
+        @include inputForm;
+    }
+    span {
+        @include spanForm;
+    }
+}
+.left-personal {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include mobile {
+        width: 100%;
+    }
+}
+.right-personal {
+    @extend .left-personal;
+    align-items: center;
+    .person-container {
+        width: 6rem;
+        height: 6rem;
+        background-color: $base-color-purple;
+        border-radius: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    @include mobile {
+        width: 100%;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    input {
+        width: 25%;
+        border: 0px;
+    }
+}

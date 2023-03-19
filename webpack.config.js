@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack & React App",
+      title: "Make Your Cv",
       template: path.resolve(__dirname, "./src/index.html"),
     }),
   ],

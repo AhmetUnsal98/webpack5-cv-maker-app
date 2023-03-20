@@ -1,1 +1,1 @@
-https://make-your-cv-ahmet.netlify.app/
+your-resume-creator.netlify.app

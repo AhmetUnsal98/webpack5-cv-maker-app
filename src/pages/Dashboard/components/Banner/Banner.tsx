@@ -33,4 +33,4 @@ const Banner: React.FC<BannerProps> = ({ direction }) => {
   );
 };
 
-export default Banner;
+export default React.memo(Banner);

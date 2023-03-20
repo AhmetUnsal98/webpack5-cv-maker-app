@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import "./dashboard.scss";
 import img from "../../assets/dash.png";
@@ -8,7 +8,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 export const Dashboard = () => {
   const navigate = useNavigate();
-
+  const [counter, setCounter] = useState(0);
+  console.log(counter);
   return (
     <MainLayout>
       <div className="dashboard">
@@ -28,7 +29,7 @@ export const Dashboard = () => {
                 Start to create now
               </button>
 
-              <button>Subscribe</button>
+              <button onClick={() => setCounter(counter + 1)}>Subscribe</button>
             </div>
           </div>
           <div className="image-container">

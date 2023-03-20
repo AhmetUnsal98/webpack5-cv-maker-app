@@ -1,1 +1,1 @@
-your-resume-creator.netlify.app
+https://your-resume-creator.netlify.app/

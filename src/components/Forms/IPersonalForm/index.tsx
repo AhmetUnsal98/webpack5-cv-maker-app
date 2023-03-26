@@ -38,6 +38,13 @@ const IPersonalForm = ({ resumeData, setResumeData }: any) => {
               setResumeData({ ...resumeData, title: e.target.value });
             }}
           ></input>
+          <input
+            type="text"
+            value={resumeData.location}
+            onChange={(e) => {
+              setResumeData({ ...resumeData, location: e.target.value });
+            }}
+          ></input>
         </div>
         <div className="right-personal">
           <div className="person-container">

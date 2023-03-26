@@ -8,6 +8,7 @@ export interface ResumeModel {
   fullName: string;
   birthDate: string;
   title: string;
+  location: string;
   schoolName: string;
   degree: string;
   eduStartDate: string;

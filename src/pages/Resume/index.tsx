@@ -37,6 +37,7 @@ const Resume = () => {
     fullName: "",
     birthDate: "",
     title: "",
+    location: "",
     schoolName: "",
     degree: "",
     eduStartDate: "",
@@ -116,7 +117,7 @@ const Resume = () => {
               <div className="right-wrapper">
                 <p>{currentResume.fullName}</p>
                 <p>{currentResume.birthDate}</p>
-                <p>Ankara</p>
+                <p>{currentResume.location}</p>
               </div>
             </div>
             <div className="section-name">

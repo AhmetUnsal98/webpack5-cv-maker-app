@@ -14,7 +14,7 @@ const override: CSSProperties = {
   left: "50%",
   top: "50%",
 };
-export const Resumes = () => {
+const Resume = () => {
   const resumes = useSelector((state: any) => state.resume.initialResumeState);
   const location = useLocation();
   const id = location.pathname.split("/")[2];
@@ -99,18 +99,18 @@ export const Resumes = () => {
               </div>
             </div>
             <div className="section-name">
-              <h2>Kişisel Bilgilerim</h2>
+              <h2>Personal Informations</h2>
             </div>
             <div className="resume-row">
               <div className="left-wrapper">
                 <p>
-                  <b>Ad Soyad :</b>
+                  <b>Name Surname :</b>
                 </p>
                 <p>
-                  <b>Doğum Tarihi :</b>
+                  <b>Birth Date :</b>
                 </p>
                 <p>
-                  <b>Yaşadığı Yer :</b>
+                  <b>Location :</b>
                 </p>
               </div>
               <div className="right-wrapper">
@@ -120,18 +120,18 @@ export const Resumes = () => {
               </div>
             </div>
             <div className="section-name">
-              <h2>Eğitim Bilgilerim</h2>
+              <h2>Education Informations</h2>
             </div>
             <div className="resume-row">
               <div className="left-wrapper">
                 <p>
-                  <b>Okul Adı :</b>
+                  <b>School Name :</b>
                 </p>
                 <p>
-                  <b>Program Adı :</b>
+                  <b>Program Name :</b>
                 </p>
                 <p>
-                  <b>Başlangıç Bitiş Yılı :</b>
+                  <b>Start Finish Dates :</b>
                 </p>
               </div>
               <div className="right-wrapper">
@@ -143,22 +143,22 @@ export const Resumes = () => {
               </div>
             </div>
             <div className="section-name">
-              <h2>İş Deneyimlerim</h2>
+              <h2>Work Experiences</h2>
             </div>
             {currentResume.experiences.map((item: any) => (
               <div className="resume-row">
                 <div className="left-wrapper">
                   <p>
-                    <b>Firma Adı :</b>
+                    <b>Company Name :</b>
                   </p>
                   <p>
-                    <b>Çalışılan Bölüm :</b>
+                    <b>Department :</b>
                   </p>
                   <p>
-                    <b>Başlangıç Bitiş Yılı :</b>
+                    <b>Start Finish Date :</b>
                   </p>
                   <p>
-                    <b>Açıklama :</b>
+                    <b>Description :</b>
                   </p>
                 </div>
                 <div className="right-wrapper">
@@ -174,7 +174,7 @@ export const Resumes = () => {
             ))}
 
             <div className="section-name">
-              <h2>Yetenkelerim</h2>
+              <h2>My Skills</h2>
             </div>
             {currentResume.skills?.map((item: any) => (
               <div className="resume-row">
@@ -189,7 +189,7 @@ export const Resumes = () => {
               </div>
             ))}
             <div className="section-name">
-              <h2>Dillerim</h2>
+              <h2>Languages</h2>
             </div>
             {languages.map((item: any) => (
               <div className="resume-row">
@@ -209,3 +209,5 @@ export const Resumes = () => {
     </>
   );
 };
+
+export default Resume;

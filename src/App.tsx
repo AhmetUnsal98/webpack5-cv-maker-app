@@ -7,13 +7,13 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import BuildPage from "./pages/Builder";
-import { Resumes } from "./pages/Resumes";
+import Resume from "./pages/Resume";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/resume/:id" element={<Resumes />}></Route>
+          <Route path="/resume/:id" element={<Resume />}></Route>
           <Route path="/" element={<Dashboard />} />
           <Route path="/build" element={<BuildPage />} />
         </Routes>

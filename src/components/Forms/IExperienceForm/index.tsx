@@ -23,7 +23,13 @@ const IExperienceForm = () => {
     (state: any) => state.resume.initialExperiencesState.experiences
   );
   function clearInputs() {
-    setInputs({});
+    setInputs({
+      companyName: "",
+      jobTitle: "",
+      startingDate: "",
+      finishingDate: "",
+      desc: "",
+    });
   }
   return (
     <motion.div
@@ -102,7 +108,7 @@ const IExperienceForm = () => {
             clearInputs();
           }}
         >
-          Ekle
+          Add
         </button>
         {experiences?.map((item: any) => (
           <div className="exp-set">

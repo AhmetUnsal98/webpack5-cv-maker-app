@@ -165,10 +165,9 @@ const Resume = () => {
                   <p>{item.inputs.companyName}</p>
                   <p>{item.inputs.jobTitle}</p>
                   <p>
-                    {item.inputs.expStartingDate} -{" "}
-                    {item.inputs.expFinishingDate}
+                    {item.inputs.startingDate} - {item.inputs.finishingDate}
                   </p>
-                  <p>{item.desc}</p>
+                  <p>{item.inputs.desc}</p>
                 </div>
               </div>
             ))}

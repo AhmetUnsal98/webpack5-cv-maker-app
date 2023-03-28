@@ -16,10 +16,11 @@
         padding: 0.4rem;
         box-shadow: 2px 2px 6px 6px gray;
         margin: 2rem;
+        @include mobile {
+            width: 100vw;
+        }
     }
-    @include mobile {
-        width: 100vw;
-    }
+
     h2 {
         color: $border-bottom-color;
     }

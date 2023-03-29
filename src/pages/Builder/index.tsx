@@ -36,6 +36,7 @@ const BuildPage = () => {
     fullName: "",
     birthDate: "",
     title: "",
+    location: "",
     schoolName: "",
     degree: "",
     eduStartDate: "",

@@ -38,6 +38,7 @@ const IPersonalForm = ({ resumeData, setResumeData }: any) => {
               setResumeData({ ...resumeData, title: e.target.value });
             }}
           ></input>
+          <span>Your Location</span>
           <input
             type="text"
             value={resumeData.location}
